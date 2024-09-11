@@ -1,0 +1,6 @@
+:root {
+    box-sizing: border-box;
+    --color-light-l: #f6f6f6;
+    --color-dark-l: #545454;
+    --font-family: "Georgia", sans-serif;
+}

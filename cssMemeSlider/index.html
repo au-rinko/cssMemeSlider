@@ -6,47 +6,62 @@
     <title>CSS Meme Slider</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.ico">
 </head>
 <body class="page-body">
-    <h1 class="visually-hidden">CSS Meme Slider</h1>
-    <div class="slider__wrapper">
-        <ul class="slider__list">
-            <li class="slider__item slider__item--active">
-                <figure class="slider__figure">
+    <main class="page-main">
+        <h1 class="visually-hidden">CSS Meme Slider</h1>
+        <div class="slider__wrapper">
+            <input type="radio" name="sliderBtn" id="sliderBtn1" class="slider__radio" checked>
+            <input type="radio" name="sliderBtn" id="sliderBtn2" class="slider__radio">
+            <input type="radio" name="sliderBtn" id="sliderBtn3" class="slider__radio">
+            <input type="radio" name="sliderBtn" id="sliderBtn4" class="slider__radio">
+            <input type="radio" name="sliderBtn" id="sliderBtn5" class="slider__radio">
+            <div class="slider__label-list">
+                <label for="sliderBtn1" class="slider__label">
+                    <span class="slider__label-button"></span>
+                </label>
+                <label for="sliderBtn2" class="slider__label">
+                    <span class="slider__label-button"></span>
+                </label>
+                <label for="sliderBtn3" class="slider__label">
+                    <span class="slider__label-button"></span>
+                </label>
+                <label for="sliderBtn4" class="slider__label">
+                    <span class="slider__label-button"></span>
+                </label>
+                <label for="sliderBtn5" class="slider__label">
+                    <span class="slider__label-button"></span>
+                </label>
+            </div>
+            <ul class="slider__list">
+                <li class="slider__item slider__item--active" id="slide1">
                     <img src="img/01.jpg" alt="Когда не запушил на гитхаб проект, а HDD накрылся">
-                    <figcaption>Когда не запушил на гитхаб проект, а HDD накрылся</figcaption>
-                </figure>
-            </li>
-            <li class="slider__item">
-                <figure class="slider__figure">
-                    <img src="img/02.jpg" alt="Нужно делать слайдер на CSS, тем временем JS">
-                    <figcaption>Нужно делать слайдер на CSS, тем временем JS</figcaption>
-                </figure>
-            </li>
-            <li class="slider__item">
-                <figure class="slider__figure">
+                </li>
+                <li class="slider__item">
+                    <img src="img/02.jpg" alt="Когда нужно сделать слайдер на CSS, но есть JS">
+                </li>
+                <li class="slider__item">
                     <img src="img/03.jpg" alt="Когда дедлайны наступают, а ты еще не читал ТЗ">
-                    <figcaption>Когда дедлайны наступают, а ты еще не читал ТЗ</figcaption>
-                </figure>
-            </li>
-            <li class="slider__item">
-                <figure class="slider__figure">
+                </li>
+                <li class="slider__item">
                     <img src="img/04.jpg" alt="Нельзя просто так взять и написать код без багов">
-                    <figcaption>Нельзя просто так взять и написать код без багов</figcaption>
-                </figure>
-            </li>
-            <li class="slider__item">
-                <figure class="slider__figure">
+                </li>
+                <li class="slider__item">
                     <img src="img/05.jpg" alt="Когда сдал домашку до дедлайнов">
-                    <figcaption>Когда сдал домашку до дедлайнов</figcaption>
-                </figure>
-            </li>
-        </ul>
-        <input type="radio" name="sliderBtn" id="sliderBtn1" checked>
-        <input type="radio" name="sliderBtn" id="sliderBtn2">
-        <input type="radio" name="sliderBtn" id="sliderBtn3">
-        <input type="radio" name="sliderBtn" id="sliderBtn4">
-        <input type="radio" name="sliderBtn" id="sliderBtn5">
-    </div>
+                </li>
+            </ul>
+            <div class="slider__caption-wrapper">
+                <ul class="slider__caption-list">
+                    <li class="slider__caption-item">Когда не запушил на гитхаб проект, а HDD накрылся</li>
+                    <li class="slider__caption-item">Когда нужно сделать слайдер на CSS, но есть JS</li>
+                    <li class="slider__caption-item">Когда дедлайны наступают, а ты еще не читал ТЗ</li>
+                    <li class="slider__caption-item">Нельзя просто так взять и написать код без багов</li>
+                    <li class="slider__caption-item">Когда сдал домашку до дедлайнов</li>
+                </ul>
+            </div>
+        </div>
+        
+    </main>
 </body>
 </html>
