@@ -95,6 +95,15 @@ img {
     background: var(--color-dark);
 }
 
+#sliderBtn1:checked ~ .slider__label-list .slider__label[for="sliderBtn1"]:hover span,
+#sliderBtn2:checked ~ .slider__label-list .slider__label[for="sliderBtn2"]:hover span,
+#sliderBtn3:checked ~ .slider__label-list .slider__label[for="sliderBtn3"]:hover span,
+#sliderBtn4:checked ~ .slider__label-list .slider__label[for="sliderBtn4"]:hover span,
+#sliderBtn5:checked ~ .slider__label-list .slider__label[for="sliderBtn5"]:hover span {
+    border: 0.2em solid var(--color-light);
+    background: var(--color-dark);
+}
+
 .slider__list {
     grid-area: slider;
     margin: 0;
