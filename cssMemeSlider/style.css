@@ -81,7 +81,7 @@ img {
     border-radius: 100%;
 }
 
-.slider__label:hover .slider__label-button{
+.slider__label:hover .slider__label-button {
     background: var(--color-light);
     border: 0.2em solid var(--color-light);
 }
@@ -165,4 +165,26 @@ img {
 #sliderBtn5:checked ~ .slider__list,
 #sliderBtn5:checked ~ .slider__caption-wrapper .slider__caption-list {
     transform: translateX(-80%);
+}
+
+@media (max-width: 767px) {
+
+    .slider__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        overflow: hidden;
+    }
+
+    .slider__label-list {
+        order: 1;
+        align-self: center;
+        margin-top: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .slider__caption-wrapper {
+        order: 2;
+    }
 }
