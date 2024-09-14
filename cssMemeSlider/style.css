@@ -47,7 +47,7 @@ img {
     grid-template-areas: 'slider slider'
                         'captions buttons';
     gap: 1em;
-    width: clamp(17.5em, 87%, 50em);
+    width: clamp(17.5em, 87%, 55em);
     overflow: hidden;
 }
 
@@ -68,7 +68,7 @@ img {
     justify-content: center;
     align-items: center;
     width: 2em;
-    height: 2em;
+    height: 2.5em;
     cursor: pointer;
 }
 
@@ -149,6 +149,7 @@ img {
     display: flex;
     justify-content: flex-start;
     width: 100%;
+    line-height: 1.8em;
 }
 
 #sliderBtn1:checked ~ .slider__list,
