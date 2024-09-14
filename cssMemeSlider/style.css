@@ -1,0 +1,200 @@
+:root {
+    box-sizing: border-box;
+    --color-light: #f6f6f6;
+    --color-dark: #25282a;
+    --color-blue: #71abfe;
+    --font-family: "Georgia", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+.visually-hidden {
+    width: 0.001em;
+    height: 0.001em;
+    margin: -0.001em;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.page-body {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    background: var(--color-dark);
+    color: var(--color-light);
+}
+
+.page-main {
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__wrapper {
+    display: grid;
+    grid-template-columns: 2.5fr 0.5fr;
+    grid-template-areas: 'slider slider'
+                        'captions buttons';
+    gap: 1em;
+    width: clamp(17.5em, 87%, 55em);
+    overflow: hidden;
+}
+
+.slider__radio {
+    display: none;
+}
+
+.slider__label-list {
+    grid-area: buttons;
+    display: inline-flex;
+    justify-content: flex-end;
+    margin-top: -0.3em;
+    text-align: right;
+}
+
+.slider__label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2.5em;
+    cursor: pointer;
+}
+
+.slider__label-button { 
+    display: block;
+    width: 0.8em;
+    height: 0.8em;
+    background: var(--color-blue);
+    border: 0.2em solid var(--color-blue);
+    border-radius: 100%;
+}
+
+.slider__label:hover .slider__label-button {
+    background: var(--color-light);
+    border: 0.2em solid var(--color-light);
+}
+
+#sliderBtn1:checked ~ .slider__label-list .slider__label[for="sliderBtn1"] span,
+#sliderBtn2:checked ~ .slider__label-list .slider__label[for="sliderBtn2"] span,
+#sliderBtn3:checked ~ .slider__label-list .slider__label[for="sliderBtn3"] span,
+#sliderBtn4:checked ~ .slider__label-list .slider__label[for="sliderBtn4"] span,
+#sliderBtn5:checked ~ .slider__label-list .slider__label[for="sliderBtn5"] span {
+    border: 0.2em solid var(--color-blue);
+    background: var(--color-dark);
+}
+
+#sliderBtn1:checked ~ .slider__label-list .slider__label[for="sliderBtn1"]:hover span,
+#sliderBtn2:checked ~ .slider__label-list .slider__label[for="sliderBtn2"]:hover span,
+#sliderBtn3:checked ~ .slider__label-list .slider__label[for="sliderBtn3"]:hover span,
+#sliderBtn4:checked ~ .slider__label-list .slider__label[for="sliderBtn4"]:hover span,
+#sliderBtn5:checked ~ .slider__label-list .slider__label[for="sliderBtn5"]:hover span {
+    border: 0.2em solid var(--color-light);
+    background: var(--color-dark);
+}
+
+.slider__list {
+    grid-area: slider;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    gap: 0;
+    width: 500%;
+    transition: all 1s;
+}
+
+.slider__item {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+.slider__item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.62em;
+}
+
+.slider__caption-wrapper {
+    grid-area: captions;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider__caption-list {
+    margin: 0;
+    padding: 0;
+    padding-left: 0.5em;
+    display: flex;
+    justify-content: flex-start;
+    width: 500%;
+    transition: all 1s;
+}
+
+.slider__caption-item {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    line-height: 1.8em;
+}
+
+#sliderBtn1:checked ~ .slider__list,
+#sliderBtn1:checked ~ .slider__caption-wrapper .slider__caption-list {
+    transform: translateX(0);
+}
+
+#sliderBtn2:checked ~ .slider__list,
+#sliderBtn2:checked ~ .slider__caption-wrapper .slider__caption-list {
+    transform: translateX(-20%);
+}
+
+#sliderBtn3:checked ~ .slider__list,
+#sliderBtn3:checked ~ .slider__caption-wrapper .slider__caption-list {
+    transform: translateX(-40%);
+}
+  
+#sliderBtn4:checked ~ .slider__list,
+#sliderBtn4:checked ~ .slider__caption-wrapper .slider__caption-list {
+    transform: translateX(-60%);
+}
+
+#sliderBtn5:checked ~ .slider__list,
+#sliderBtn5:checked ~ .slider__caption-wrapper .slider__caption-list {
+    transform: translateX(-80%);
+}
+
+@media (max-width: 767px) {
+
+    .slider__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        overflow: hidden;
+    }
+
+    .slider__label-list {
+        order: 1;
+        align-self: center;
+        margin-top: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .slider__caption-wrapper {
+        order: 2;
+    }
+}
